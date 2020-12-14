@@ -1,6 +1,6 @@
 {
   "name": "sima-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
     "commander": "^6.2.1",
