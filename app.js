@@ -109,9 +109,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(${component.componen
     console.log('Error argument', args)
 }
 
-const srcPath = [__dirname]
-const componentPath = [...srcPath, component.componentPath]
+// const componentPath = [...srcPath, component.componentPath]
 
-writeFileSync(resolve(...componentPath, `${component.componentName}.${component.format}`), component.componentCode);
+writeFileSync(resolve(component.componentPath, `${component.componentName}.${component.format}`), component.componentCode);
 
 console.log('Created')
