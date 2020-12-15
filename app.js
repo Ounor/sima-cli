@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const minimist = require('minimist')
+
+import { writeFileSync } from 'fs'
+import { resolve } from 'path'
+import minimist from 'minimist'
+import arg from 'arg'
 
 const args = minimist(process.argv)
 let paramsArray = []
@@ -32,14 +34,14 @@ import {Colors, Fonts} from '../../Themes'
 
     export default StyleSheet.create({})`;
 
-    if (path.resolve('App/Component/Styles')) {
-        fs.writeFileSync(path.resolve('App/Component/Styles', `${args.c}Styles.js`), styleCode);
+    if (resolve('App/Components/Styles')) {
+        writeFileSync(resolve('App/Components/Styles', `${args.c}Styles.js`), styleCode);
     }
     if (args.p) {
         params = args.p
         paramsArray = params.split(',')
     }
-    component.componentPath = 'App/Component/'
+    component.componentPath = 'App/Components/'
     component.componentParams = args.p
     component.componentName = args.c
     component.componentCode = `// @flow
@@ -103,14 +105,13 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(${component.componentName})
 `;
 } else {
+    console.log('Check arguments')
     console.log('Error argument', args)
-    return
 }
 
 const srcPath = [__dirname]
 const componentPath = [...srcPath, component.componentPath]
 
-fs.writeFileSync(path.resolve(...componentPath, `${component.componentName}.${component.format}`), component.componentCode);
+writeFileSync(resolve(...componentPath, `${component.componentName}.${component.format}`), component.componentCode);
 
-
-console.log('Ready')
+console.log('Created')
