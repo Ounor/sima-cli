@@ -1,6 +1,6 @@
 {
-  "name": "sima-cli",
-  "version": "1.0.0",
+  "name": "sima-generator-cli",
+  "version": "1.0.1",
   "main": "app.js",
   "dependencies": {
     "commander": "^6.2.1",
@@ -11,6 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pereladov <pereladov@hotmail.com>",
+  "repository": "https://github.com/Ounor/sima-cli",
   "license": "MIT",
   "description": "Your package description"
 }
