@@ -1,12 +1,23 @@
 {
   "name": "sima-generator-cli",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "app.js",
   "dependencies": {
     "arg": "^5.0.0",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
     "commander": "^6.2.1",
+    "configstore": "^5.0.1",
+    "figlet": "^1.5.0",
     "inquirer": "^7.3.3",
-    "minimist": "^1.2.5"
+    "lodash": "^4.17.20",
+    "minimist": "^1.2.5",
+    "resolve": "^1.19.0",
+    "simple-git": "^2.31.0",
+    "touch": "^3.1.0",
+    "yargs": "^16.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +27,5 @@
   "author": "pereladov <pereladov@hotmail.com>",
   "repository": "https://github.com/Ounor/sima-cli",
   "license": "MIT",
-  "description": "Your package description",
-  "type": "module"
+  "description": "Your package description"
 }
