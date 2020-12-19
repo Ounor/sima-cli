@@ -5,7 +5,7 @@ const figlet = require("figlet");
 const inquirer  = require('./lib/inquirer');
 
 console.log(
-  chalk.yellow(
+  chalk.blue(
     figlet.textSync('Sima CLI', { horizontalLayout: 'full' })
   )
 );
